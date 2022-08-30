@@ -22,13 +22,13 @@ $(document).ready(function() {
             success: function(dado) {
                 if (dado.tipo == "success") {
                     $('.modal-body').load('src/promocao/view/form-promocao.html', function() {
-                        $('#TÍTULO').val(dado.dados.TITULO)
-                        $('#DESCRIÇÃO').val(dado.dados.DESCRICAO)
-                        $('#INÍCIO').val(dado.dados.INICIO)
-                        $('#TÉRMINO').val(dado.dados.TERMINO)
-                        $('#SORTEIO').val(dado.dados.SORTEIO)
-                        $('#ARRECADAÇÃO').val(dado.dados.ARRECADACAO)
-                        $('#VALOR').val(dado.dados.VALOR)
+                        $('#TITULO').val(dado.dados.TITULO)
+                        $('#DESCRICAO').val(dado.dados.DESCRICAO)
+                        $('#INICIO').val(dado.dados.DATA_INICIO)
+                        $('#TERMINO').val(dado.dados.DATA_FIM)
+                        $('#SORTEIO').val(dado.dados.DATA_SORTEIO)
+                        $('#ARRECADACAO').val(dado.dados.ARRECADACAO)
+                        $('#VALOR').val(dado.dados.VALOR_RIFA)
                         $('#ID').val(dado.dados.ID)
                     })
                     $('.btn-save').removeAttr('data-operation', 'insert')
