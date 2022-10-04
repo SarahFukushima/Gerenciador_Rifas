@@ -23,7 +23,8 @@ $(document).ready(function() {
                 if (dado.tipo == "success") {
                     $('.modal-body').load('src/premio/view/form-premio.html', function() {
                         $('#NOME').val(dado.dados.NOME)
-                        $('#CELULAR').val(dado.dados.CELULAR)
+                        $('#DESCRICAO').val(dado.dados.DESCRICAO)
+                        $('#VALOR').val(dado.dados.VALOR)
                         $('#ID').val(dado.dados.ID)
                     })
                     $('.btn-save').removeAttr('data-operation', 'insert')

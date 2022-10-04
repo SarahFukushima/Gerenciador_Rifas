@@ -22,11 +22,12 @@
         if($operacao == 'insert'){
             // Prepara o comando INSERT para ser executado
             try{
-                $stmt = $pdo->prepare('INSERT INTO PREMIO (NOME,CELULAR) VALUES (:a, :b)');
+                $stmt = $pdo->prepare('INSERT INTO PREMIO (NOME,DESCRICAO,VALOR) VALUES (:a, :b, :c)');
                 $stmt->execute(array(
                     //':a' => utf8_decode($requestData['NOME'])
                     ':a' => $requestData['NOME'],
-                    ':b' => $requestData['CELULAR']
+                    ':b' => $requestData['DESCRICAO'],
+                    ':c' => $requestData['VALOR']
                 ));
                 $dados = array(
                     "tipo" => 'success',
